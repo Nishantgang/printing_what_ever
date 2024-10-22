@@ -1,0 +1,48 @@
+// TO Print as many times you ask to print and skip line which you want 
+
+#include <stdio.h>
+
+int main(){
+    // vaiables to store specific data
+    char word[100];   
+    int print;
+    char skip;
+    int line;
+    int i=1;
+    char yes;
+    
+    // Ask from user what does he/she want to print
+    printf("What do you want to print: ");
+    scanf("%[^\n]%*c", word); 
+    
+    // Ask how many times he/she want to print it
+    printf("How many times do you want to print it: ");
+    scanf("%d", &print);
+    
+    //  Ask the user does he/she want to skip a line or not
+    printf("Do you want to skip a line Y/N ; ");
+    scanf(" %c", &skip);
+    
+    //  If statement 
+    if(skip=='Y' || skip=='y'){
+        printf("Which line do you want to skip; ");
+    scanf("%d", &line);
+    }
+    
+    else{
+        printf("\n");
+    }
+    // For loop statement 
+    for(i=1;i<=print;i++){
+        if(i==line)
+        continue;
+        printf("%d. %s \n", i, word);
+        
+  }
+  
+  printf("\n");
+  
+   printf("Thank you for using my tool !\n");
+      return 0;
+}      
+
